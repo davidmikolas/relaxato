@@ -23,13 +23,13 @@ nmax = 3
 # E_bond_alpha = 60   # 25 meV * ((d-d0)/0.1A)^2 and 250 meV E_surfac amplitude 
 
 E_bond_alphas = [30, 60, 120]   # 25 meV * ((d-d0)/0.1A)^2 and 250 meV E_surfac amplitude 
-E_bond_alphas = E_bond_alphas[:2] #######  QQQ
+# E_bond_alphas = E_bond_alphas[:2] #######  QQQ
 
 rotations = np.arange(31)
-rotations = rotations[-2:] #######  QQQ
+# rotations = rotations[-2:] #######  QQQ
 
-lattice_constants = [1.32, 1.35, 1.38] # np.linspace(1.32, 1.38, 3)
-lattice_constants = lattice_constants[:2] #######
+lattice_constants = np.linspace(1.32, 1.38, 7)
+# lattice_constants = lattice_constants[:2] #######
 
 ### Page variables ###
 
@@ -37,7 +37,7 @@ sig_xy = 0.0
 
 # DAMPING
 dampings = [2, 4, 8]
-dampings = dampings[:2] ####### QQQ
+# dampings = dampings[:2] ####### QQQ
 
 # OFFSETS
 v1, v2 = np.array([[1, 0], [0.5, 3**0.5/2]])
@@ -59,7 +59,7 @@ xy_offsets = xy_offsets[-1:] ###### QQQ
 
 begin_time_string = datetime.today().strftime('%Y-%m-%d at %H.%M.%S.%f')
 
-job_name = '0a1' + ' ' + begin_time_string
+job_name = 'happy' + ' ' + begin_time_string
 
 total_process_time_start = time.process_time()
 total_time_start = time.time()
